@@ -40,10 +40,11 @@
     let item = '';
     let btns = document.getElementById('btn1');
     btns.addEventListener("click",function(){
-        tg.sendData(item);
+        
         console.log('bosildi@');
         item = '12';
         tg.MainButton.setText("1 ta");
+        tg.sendData(item);
     });
 
     Telegram.WebApp.onEvent("mainButtonClicked",function(){
