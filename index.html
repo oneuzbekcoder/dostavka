@@ -10,20 +10,34 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class=" navbar fixed-top navbar-light bg-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fixed top</a>
+        </div>
+    </nav> 
     <div class="container">
-        
-        <div class="row">
-            <div class="col">
-                <img src="https://bazarplus.uz/wp-content/uploads/2022/10/yumshoq-gosht-qoy.png" alt="" class="img">
-                <button class="btn btn-warning" id="btn1">Add</button>
+       
+        <div class="row mt-5">
+            
+            <div class="col-4 mt-5">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top img" src="https://bazarplus.uz/wp-content/uploads/2022/10/yumshoq-gosht-qoy.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-            <div class="col"><img src="https://bazarplus.uz/wp-content/uploads/2022/10/yumshoq-gosht-qoy.png" alt="" class="img"><button class="btn btn-warning"  id="btn2">Add</button></div>
-            <div class="col"><img src="https://bazarplus.uz/wp-content/uploads/2022/10/yumshoq-gosht-qoy.png" alt="" class="img"><button class="btn btn-warning"  id="btn3">Add</button></div>
-            <div class="col"><img src="https://bazarplus.uz/wp-content/uploads/2022/10/yumshoq-gosht-qoy.png" alt="" class="img"><button class="btn btn-warning"  id="btn4">Add</button></div>
-            <div class="col"><img src="https://bazarplus.uz/wp-content/uploads/2022/10/yumshoq-gosht-qoy.png" alt="" class="img"><button class="btn btn-warning"  id="btn5">Add</button></div>
-            <div class="col"><img src="https://bazarplus.uz/wp-content/uploads/2022/10/yumshoq-gosht-qoy.png" alt="" class="img"><button class="btn btn-warning"  id="btn1">Add</button></div>
-            <div class="col"><img src="https://bazarplus.uz/wp-content/uploads/2022/10/yumshoq-gosht-qoy.png" alt="" class="img"><button class="btn btn-warning"  id="btn1">Add</button></div>
-
+            <div class="col-4 mt-5">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top img" src="https://bazarplus.uz/wp-content/uploads/2022/10/yumshoq-gosht-qoy.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+           
             <div id="user" class="col-12">
 
             </div>
@@ -45,6 +59,7 @@
         item = '12';
         tg.MainButton.setText("1 ta");
         tg.sendData(item);
+        tg.close();
     });
 
     Telegram.WebApp.onEvent("mainButtonClicked",function(){
@@ -53,6 +68,7 @@
 
     let user = document.getElementById('user');
     user.innerText  = `${tg.initDataUnsafe.user.first_name} ${tg.initDataUnsafe.user.id}`
+
 </script>
 </body>
 </html>
