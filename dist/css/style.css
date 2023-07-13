@@ -3,7 +3,10 @@ body {
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
 }
-
+.card {
+    border: none !important;
+    text-align: center;
+}
 /* .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
