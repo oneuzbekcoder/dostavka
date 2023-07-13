@@ -23,10 +23,10 @@ stores = [
     }
 ]
 
-@app.get("/store")
+@app.get("/")
 def get_stores():
-    return {"stores": stores}
 
+    return render_template('index.html')
 
 @app.post("/store")
 def create_store():
