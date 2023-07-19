@@ -1,6 +1,7 @@
 from flask import Flask, request
 from flask import Flask,jsonify, send_from_directory, render_template, redirect, request, session,url_for
 from flask_sqlalchemy import SQLAlchemy
+import os
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.db"
 db = SQLAlchemy(app)
@@ -11,56 +12,44 @@ class users(db.Model):
     tg_id = db.Column(db.Integer)
     tel = db.Column(db.Integer)
 
-stores = [
-    {
-        "name": "My Store",
-        "items": [
-            {
-                "name": "Chair",
-                "price": 15.99
-            }
-        ]
-    }
-]
+class tashkilot(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nomi = db.Column(db.String)
+    ish_vaqti = db.Column(db.String)
+    rasm = db.Column(db.String)
+    turi = db.Column(db.Integer)
 
 @app.get("/")
 def get_stores():
-
     return render_template('index.html')
 
-@app.post("/store")
-def create_store():
-    request_data = request.get_json()
-    new_store = {"name": request_data["name"], "items": []}
-    stores.append(new_store)
-    return new_store, 201
+@app.post("/tashkilot/<id>")
+def tashkilotfunc(id):
+    if id=='1':
+        tashkilotlar = []
+        data = tashkilot.query.all()
+        for x in data:
+            dicc = {"id":x.id,"nomi":x.nomi,"ish_vaqti":x.ish_vaqti,"rasm":x.rasm,"turi":x.turi}
+            tashkilotlar.append(dicc)
+        return jsonify(json_list=tashkilotlar)
+    else:
+        return {"Do'kon":"OK"}
 
 
-@app.post("/store/<string:name>/item")
-def create_item(name):
-    request_data = request.get_json()
-    for store in stores:
-        if store["name"] == name:
-            new_item = {"name": request_data["name"], "price": request_data["price"]}
-            store["items"].append(new_item)
-            return new_item, 201
-    return {"message": "Store not found"}, 404
+@app.post("/")
+@app.post("/<string:bulim>/<id>")
+def create_item(bulim=None,id=None):
+    if bulim!=None and id!=None:
+        return  {"name": 'Tovar', "id": 99999}
+    elif bulim!=None and id==None:
+        return  {"name": 'Tashkilot', "id": 99999}
+    else:
+        return  {"name": 'Home', "id": 99999}
+   
 
-
-@app.get("/store/<string:name>")
-def get_store(name):
-    for store in stores:
-        if store["name"] == name:
-            return store
-    return {"message": "Store not found"}, 404
-
-
-@app.get("/store/<string:name>/item")
-def get_item_in_store(name):
-    for store in stores:
-        if store["name"] == name:
-            return {"items": store["items"]}
-    return {"message": "Store not found"}, 404
-
+@app.get("/img/<string:file>")
+def get_file(file):
+    uploads = os.path.join('static', 'img')
+    return send_from_directory(uploads, file)
 if __name__ == '__main__':
-    app.run(debug=True,port=2525)
+    app.run(debug=True,port=2525,host='0.0.0.0')

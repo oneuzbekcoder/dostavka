@@ -86,12 +86,19 @@
 <script src="./dist/js/tovar.js"></script>
 <script>
     $(".plus").click(function(){
-        $.getJSON("http://127.0.0.1:2525/store/My%20Store", function(data, status){
-            console.log(result,status)
-            // $.each(result, function(i, field){
-            //     console.log(result)
-            // });
-        });
+        let data;
+        while (1==1) {
+            data = getjson('tashkilot', 1)
+            if (data!='NO'){
+                console.log(data);
+                break;
+            }
+            else{
+                setTimeout(function(){
+                    console.log("Serverga ulanib bo'lmayapti");
+                }, 1000);
+            }
+        }
     });
     let tg = window.Telegram.WebApp;
     tg.expand();
