@@ -34,15 +34,16 @@ section {
    margin-top: 35px;
 }
 section div {
-    width: 33.3%;
+    width: 100%;
     padding: 15px;
     cursor: pointer;
     text-align: center;
 }
 .card {
-    background-color: dodgerblue;
-    color: white;
-    padding: 1rem;
+    background-color: rgba(220, 240, 220, 0.774);
+    color: rgb(17, 3, 77);
+    border-radius: 15px;
+    padding: 0.5rem;
   }
   .item {
     color: black;

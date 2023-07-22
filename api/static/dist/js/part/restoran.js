@@ -1,8 +1,8 @@
 $(document).ready(function(){
     let  url ='http://127.0.0.1:2525'
     $(document).on("click",".restoran",function() {
-        $('.cardsx').html('<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>');
-       try {
+        $('.cardsx').html('<div class="lds-roller" style="margin-top:15px; "><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>');
+        try {
         $.getJSON({
             url: `${url}/tashkilot/1`, 
             method: 'post',   
@@ -35,12 +35,16 @@ $(document).ready(function(){
                     `;
                     for (let index = 0; index < data['json_list'].length; index++) {
                         const x = data['json_list'][index];
-                        html +=`                        
-                            <div class="card tcard" id="${x['id']}">
-                                <img src="${x['rasm']}">
-                                <h2>${x['nomi']}</h2>
-                                <h4>${x['ish_vaqti']}</h4>
-                            </div>                        
+                        html +=`  
+                            <table class="card tcard" style="border:0;width:100%;" id="${x['id']}">
+                                <tr>
+                                    <td style="width:25%;"><img style="width:100%;"  src="${x['rasm']}"></td>                      
+                                    <td>
+                                        <h2>${x['nomi']}</h2>
+                                        <h4>${x['ish_vaqti']}</h4>
+                                    </td>
+                                </tr>
+                            </table>                     
                         `;
                     }
                     html +='</div>';

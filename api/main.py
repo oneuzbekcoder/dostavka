@@ -19,15 +19,26 @@ class tashkilot(db.Model):
     rasm = db.Column(db.String)
     turi = db.Column(db.Integer)
 
+class tovar(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nomi = db.Column(db.String)
+    narxi = db.Column(db.Integer)
+    tashkilot = db.Column(db.Integer)
+    tarif = db.Column(db.Integer)
+    rasm = db.Column(db.Integer)
+    count = db.Column(db.Integer)
+    bulim = db.Column(db.String)
+    bulim = db.Column(db.String)
+
 @app.get("/")
 def get_stores():
     return render_template('index.html')
 
 @app.post("/tashkilot/<id>")
 def tashkilotfunc(id):
-    if id=='1':
+    if id=='1' or id=='2':
         tashkilotlar = []
-        data = tashkilot.query.all()
+        data = tashkilot.query.filter_by(turi=id).all()
         for x in data:
             dicc = {"id":x.id,"nomi":x.nomi,"ish_vaqti":x.ish_vaqti,"rasm":x.rasm,"turi":x.turi}
             tashkilotlar.append(dicc)
@@ -35,6 +46,17 @@ def tashkilotfunc(id):
     else:
         return {"Do'kon":"OK"}
 
+
+@app.post("/tovar/<tashkilot_id>")
+def tovarfunc(tashkilot_id):
+    tovarlar = []
+    data = tovar.query.filter_by(tashkilot=tashkilot_id).all()
+    tash = tashkilot.query.filter_by(id=tashkilot_id).first()
+    for x in data:
+        dicc = {"id":x.id,"nomi":x.nomi,"narxi":x.narxi,"tashkilot":x.tashkilot,"tarif":x.tarif,"count":x.count,"rasm":x.rasm,"turi":x.turi,"bulim":x.bulim,"turi":x.turi}
+        tovarlar.append(dicc)
+    return jsonify(json_list=tovarlar,tashkilot_nomi=tash.nomi)
+   
 
 @app.post("/")
 @app.post("/<string:bulim>/<id>")

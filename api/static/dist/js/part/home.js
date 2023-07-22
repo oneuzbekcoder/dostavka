@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.cardsx').html('<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>');
+    $('.cardsx').html('<div style="margin-top:45px; class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>');
     let  url ='http://127.0.0.1:2525'
 try {
 $.getJSON({
@@ -7,7 +7,6 @@ $.getJSON({
     method: 'post',   
     success: function(data, status){
         if(status==='success'){
-
             let div = `
             <div style="
                 display:flex;
@@ -31,6 +30,7 @@ $.getJSON({
                 </div>
             </div>
             <h3 style="text-align:center">Taomlar</h3>
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
            <div class="owl-carousel owl-theme">
                 <div class="item">
                     <img src="img/photo_2023-07-01_08-04-47.jpg" class="animated">
@@ -39,6 +39,7 @@ $.getJSON({
                 
             </div>
             <h3 style="text-align:center">Ichimliklar</h3>
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
            <div class="owl-carousel owl-theme">
                 <div class="item">
                     <img src="img/photo_2023-07-01_08-04-47.jpg" class="animated">
@@ -74,6 +75,7 @@ catch {
 }
 
 setTimeout(function(){
+    $('.lds-roller').remove();
     $('.owl-carousel').owlCarousel({
         animateOut: 'slideOutDown',
         animateIn: 'flipInX',
