@@ -3,7 +3,7 @@ import { home, addItemOne, removeItemOne,savatx} from './modules/func.js';
 $(document).ready(function () {
     let tg = window.Telegram.WebApp;
     tg.expand();
-    const tgid = tg.initDataUnsafe.user.id;//5567423168; //
+    const tgid = 5567423168; //tg.initDataUnsafe.user.id;//5567423168; //
     // const user = tg.initDataUnsafe.user.first_name;
     let savat= {
         "tovarlar":[],
