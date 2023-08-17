@@ -11,7 +11,7 @@ $(document).ready(function () {
     }
     try {
         $.getJSON({
-            url: `http://54.246.248.11/api?i=${tgid}`, 
+            url: `https://54.246.248.11/api?i=${tgid}`, 
             method: 'post',   
             success: function(data, status){
                 if(status==='success' && data.content!=0){
