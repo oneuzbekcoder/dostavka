@@ -3,8 +3,9 @@ import { home, addItemOne, removeItemOne,savatx} from './modules/func.js';
 $(document).ready(function () {
     let tg = window.Telegram.WebApp;
     tg.expand();
-    const tgid = 5567423168; //tg.initDataUnsafe.user.id;//5567423168; //
+    const tgid = tg.initDataUnsafe.user.id;//5567423168; //
     // const user = tg.initDataUnsafe.user.first_name;
+    console.log(tgid);
     let savat= {
         "tovarlar":[],
         "tg_id":tgid
