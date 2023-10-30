@@ -5,7 +5,7 @@ $(document).ready(function () {
     tg.expand();
     const tgid = tg.initDataUnsafe.user.id;//5567423168; //
     // const user = tg.initDataUnsafe.user.first_name;
-    console.log(tgid);
+    alert(tgid);
     let savat= {
         "tovarlar":[],
         "tg_id":tgid
