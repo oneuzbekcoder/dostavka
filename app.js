@@ -1,5 +1,5 @@
 import { home, addItemOne, removeItemOne,savatx} from './modules/func.js';
-
+alert("aaa");
 $(document).ready(function () {
     let tg = window.Telegram.WebApp;
     tg.expand();
