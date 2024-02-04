@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Yetkzamiz!</title>
+</head>
+<body>
+  <!-- <div class="lds-ripple"><div></div><div></div></div> -->
+    <div class="container" style="max-width: 400px !important;">
+      <nav class="navbar fixed-top navbar-expand-sm bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="bi bi-cart-check"></i> Yetkazamiz!</a>
+          <!-- <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-search shadow-none"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Fanta" aria-label="Search">
+              <button class="btn btn-outline-success shadow-none" type="submit">Qidirish</button>
+            </form>
+          </div> -->
+        </div>
+      </nav>
+      <div class="table-responsive" style="margin-top: 55px;">
+          <table class="table">
+              <tr>
+                  <td class="text-center"><button class="btn btn-sm btn-outline-secondary"><i class="bi bi-telephone"></i> +998972449410</button></td>
+                  <td class="text-center"><button class="btn btn-sm  btn-outline-secondary"><i class="bi bi-telephone"></i> +998942099410</button></td>
+              </tr>
+          </table>
+      </div>
+      <div class="body">
+          
+      <div class="d-flex justify-content-center">      
+        <div class="lds-ripple "><div></div><div></div></div> 
+      </div>     
+    
+      </div>
+      <nav class="fixed-bottom navbar-light bg-light">
+        <div class="container-fluid" >
+          <div class="row">
+            <div class="col-12 p-2">
+                <button class="btn btn-outline-primary w-100  savatbtn" >
+                    <i class="bi bi-cart-fill"></i> Savatcha <span class="badge bg-warning sbadge">0</span>
+                </button>
+            </div>          
+          </div>
+        </div>
+      </nav>
+    </div>    
+
+    <!-- ModalSavat -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Savat</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row" >
+                  <div class="col-12">
+                    <h2 class="text-center">Sizning buyurtmalaringiz</h2>
+                  </div>
+                 <div class="table-responsive stable">
+
+                 </div>
+                </div> 
+              </div>
+             </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-warning" onClick="window.location.reload();"> Tozalash <i class="bi bi-cart-check"></i></button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-reply"></i> Qaytish</button>
+            <button type="button" class="btn btn-primary tasdiqlashbtn"> Tasdiqlash <i class="bi bi-cart-check"></i></button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Modal INFO-->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>

@@ -1,109 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tz</title>
+    <!-- link style.css -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Yetkzamiz!</title>
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-  <!-- <div class="lds-ripple"><div></div><div></div></div> -->
-    <div class="container" style="max-width: 400px !important;">
-      <nav class="navbar fixed-top navbar-expand-sm bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><i class="bi bi-cart-check"></i> Yetkazamiz!</a>
-          <!-- <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-search shadow-none"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Fanta" aria-label="Search">
-              <button class="btn btn-outline-success shadow-none" type="submit">Qidirish</button>
-            </form>
-          </div> -->
-        </div>
-      </nav>
-      <div class="table-responsive" style="margin-top: 55px;">
-          <table class="table">
-              <tr>
-                  <td class="text-center"><button class="btn btn-sm btn-outline-secondary"><i class="bi bi-telephone"></i> +998972449410</button></td>
-                  <td class="text-center"><button class="btn btn-sm  btn-outline-secondary"><i class="bi bi-telephone"></i> +998942099410</button></td>
-              </tr>
-          </table>
-      </div>
-      <div class="body">
-          
-      <div class="d-flex justify-content-center">      
-        <div class="lds-ripple "><div></div><div></div></div> 
-      </div>     
-    
-      </div>
-      <nav class="fixed-bottom navbar-light bg-light">
-        <div class="container-fluid" >
-          <div class="row">
-            <div class="col-12 p-2">
-                <button class="btn btn-outline-primary w-100  savatbtn" >
-                    <i class="bi bi-cart-fill"></i> Savatcha <span class="badge bg-warning sbadge">0</span>
-                </button>
-            </div>          
-          </div>
-        </div>
-      </nav>
-    </div>    
-
-    <!-- ModalSavat -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Savat</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row" >
-                  <div class="col-12">
-                    <h2 class="text-center">Sizning buyurtmalaringiz</h2>
-                  </div>
-                 <div class="table-responsive stable">
-
-                 </div>
-                </div> 
-              </div>
-             </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-warning" onClick="window.location.reload();"> Tozalash <i class="bi bi-cart-check"></i></button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-reply"></i> Qaytish</button>
-            <button type="button" class="btn btn-primary tasdiqlashbtn"> Tasdiqlash <i class="bi bi-cart-check"></i></button>
+    <!-- HEADER START -->
+    <header>
+        <div class="exit">
+            <div class="container">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <h3>Выход</h3>
             </div>
         </div>
+        <!-- ---- start navbar top -->
+        <div class="navbar_top">
+            <!-- container -->
+            <div class="container">
+                <!-- navbar top -->
+                <div class="navbar_top_menu">
+                    <!-- list menu -->
+                    <li class="list">
+                        <a href="#">Интерфейс</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">соц.сети</a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="active">журнал</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">Импорт</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">экспорт</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">пользователь</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">Email яшик</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">ключ.парол</a>
+                    </li>
+                    <li class="list">
+                        <a href="#">разное</a>
+                    </li>
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- Modal INFO-->
-<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="infoModalLabel">Title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
-      </div>
-    </div>
-  </div>
-</div>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="app.js"></script>
+        <!-- --- start navbar bottom -->
+        <div class="navbar_bottom">
+            <!-- container -->
+            <div class="container">
+                <!-- menu  -->
+                <ul class="navbar_bottom_menu">
+                    <li class="list">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                        <a href="#">объявление</a>
+                    </li>
+                    <li class="list ">
+                        <i class="fa-solid fa-user-plus active"></i>
+                        <a href="#" class="active" >вакансия</a>
+                    </li>
+                    <li class="list">
+                        <i class="fa-solid fa-user-group"></i>
+                        <a href="#">соискатели</a>
+                    </li>
+                    <li class="list">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="#">Email рассылка</a>
+                    </li>
+                    <li class="list">
+                        <i class="fa-solid fa-comments"></i>
+                        <a href="#">отклики</a>
+                    </li>
+                    <li class="list">
+                        <i class="fa-solid fa-user-pen"></i>
+                        <a href="#">ФИО</a>
+                    </li>
+                    <li class="list">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <a href="#">учебная заявления</a>
+                    </li>
+                    <li class="list">
+                        <i class="fa-solid fa-address-book"></i>
+                        <a href="#">адрес</a>
+                    </li>
+                    <li class="list">
+                        <i class="fa-solid fa-city"></i>
+                        <a href="#">кампания</a>
+                    </li>
+                </ul>
+                <!-- menu end -->
+            </div>
+        </div>
+    </header>
+    <!-- SECTION MENU start -->
+    <section class="section_menu">
+        <div class="container">
+            <div class="nav-item">
+                <div id="add">
+                    <i class="fa-solid fa-plus"></i>
+                    add A New one
+                </div>
+                <div>
+                    <i class="fa-regular fa-circle-xmark" style="color: red;"></i>
+                    Deselect
+                </div>
+                <div>
+                    <i class="fa-solid fa-check-double"></i>
+                    In TOTAL: <span style="color:lime ;">298732</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-download"></i>
+                    import
+                </div>
+                <div>
+                    <i class="fa-solid fa-file-export"></i>
+                    export
+                </div>
+                <div>
+                    <i class="fa-solid fa-trash-can"></i>
+                    Delete everything
+                </div>
+                <div>
+                    <i class="fa-solid fa-file-lines"></i>
+                    MS exel
+                </div>
+            </div>
+        </div>
 
+    </section>
+    <!-- ----- SECTION BLOCK start -->
+    <section class="section_block">
+        <div class="container">
+            <!-- left block -->
+            <div class="section_block_left">
+                <p>указать страницу</p>
+                <input type="text" id="number" maxlength="3">
+                <a href="#" class="button">
+                    Go
+                </a>
+            </div>
+            <!-- right block -->
+            <div class="section_block_right">
+                <a href="#" id="button"><i class="fa-solid fa-angles-left"></i></a>
+                <a href="#" id="button">First</a>
+                <a href="#" id="btn">1</a>
+                <a href="#" id="btn" class="active">2</a>
+                <a href="#" id="btn">3</a>
+                <a href="#" id="btn">4</a>
+                <a href="#" id="btn">5</a>
+                <a href="#" id="btn">6</a>
+                <a href="#" id="btn">7</a>
+                <a href="#" id="btn">8</a>
+                <a href="#" id="btn">9</a>
+                <a href="#" id="btn">10</a>
+                <a href="#" id="btn">11</a>
+                <a href="#" id="btn">...</a>
+                <a href="#" id="btn">23</a>
+                <a href="#" id="button">Next</a>
+                <a href="#" id="button"><i class="fa-solid fa-angles-right"></i></a>
+
+            </div>
+        </div>
+    </section>
+    <!-- SECTION TABLE starts -->
+    <section class="table">
+        <div class="container">
+
+            <div class="divTable blueTable">
+                <!-- table heaading  -->
+                <div class="divTableHeading">
+                    <div class="divTableRow">
+                        <div class="divTableHead" id="head1">№</div>
+                        <div class="divTableHead" id="head2">ID</div>
+                        <div class="divTableHead" id="head3">Nazvaniya Vakansiya</div>
+                        <div class="divTableHead" id="head4">Edit</div>
+                        <div class="divTableHead" id="head5">Del</div>
+                        <div class="divTableHead" id="head6">Istochnik Dabavleniya</div>
+                        <div class="divTableHead" id="head7">Data</div>
+                    </div>
+                </div>
+                <!-- table heading end -->
+                <div class="divTableBody">
+                    <!-- table body starts -->
+                    <div class="divTableRow">
+                        <!-- empty -->
+                        <div class="divTableCell"></div>
+                        <!-- search cell -->
+                        <div class="divTableCell">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <!-- seaarch input -->
+                        <div class="divTableCell" id="search-inp">
+                            <input type="text" id="search" placeholder="поиск ..." maxlength="30">
+                            <!-- cansel icon -->
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 1 column -->
+                    <!-- 2 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">1</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 3 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">2</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 4 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">3</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 5 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">4</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 6 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">5</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 7 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">6</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 8 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">7</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 9 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">8</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 10 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">9</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                    <!-- 11 column -->
+                    <div class="divTableRow">
+                        <div class="divTableCell">10</div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                        <div class="divTableCell"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Select Block starts again -->
+    <section class="section_block">
+        <div class="container">
+            <!-- left block -->
+            <div class="section_block_left">
+                <p>указать страницу</p>
+                <input type="text" id="number" maxlength="3">
+                <a href="#" class="button">
+                    Go
+                </a>
+            </div>
+            <!-- right block -->
+            <div class="section_block_right">
+                <a href="#" id="button"><i class="fa-solid fa-angles-left"></i></a>
+                <a href="#" id="button">First</a>
+                <a href="#" id="btn">1</a>
+                <a href="#" id="btn" class="active">2</a>
+                <a href="#" id="btn">3</a>
+                <a href="#" id="btn">4</a>
+                <a href="#" id="btn">5</a>
+                <a href="#" id="btn">6</a>
+                <a href="#" id="btn">7</a>
+                <a href="#" id="btn">8</a>
+                <a href="#" id="btn">9</a>
+                <a href="#" id="btn">10</a>
+                <a href="#" id="btn">11</a>
+                <a href="#" id="btn">...</a>
+                <a href="#" id="btn">23</a>
+                <a href="#" id="button">Next</a>
+                <a href="#" id="button"><i class="fa-solid fa-angles-right"></i></a>
+
+            </div>
+        </div>
+    </section>
+    <!-- JS LINK -->
+    <script src="script.js"></script>
 </body>
+
 </html>
